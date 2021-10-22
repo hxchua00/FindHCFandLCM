@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FindHCFandLCM
 {
@@ -24,13 +20,16 @@ namespace FindHCFandLCM
             //Finding HCF
             while (b != 0)
             {
-                temp = b; //Store in temp to not lose original value
-                b = a % b; //if remainder = 0, it means HCF have been reached.
-                a = temp; 
+                temp = b;
+                //Console.WriteLine($"temp {temp}"); //for testing
+                b = a % b;
+                //Console.WriteLine($"b {b}"); //for testing
+                a = temp;
+                //Console.WriteLine($"a {a}"); //for testing
             }
 
             HCF = a;
-            LCM = (x * y) / HCF;
+            LCM = (x * y) / HCF; 
 
             Console.WriteLine("HCF is " + HCF);
             Console.WriteLine("LCM is " + LCM);
